@@ -10,10 +10,12 @@ import (
 var Conf = new(AppConfig)
 
 type AppConfig struct {
-	Name    string `mapstructure:"name"`
-	Mode    string `mapstructure:"mode"`
-	Version string `mapstructure:"version"`
-	Port    int    `mapstructure:"port"`
+	Name      string `mapstructure:"name"`
+	Mode      string `mapstructure:"mode"`
+	Version   string `mapstructure:"version"`
+	Port      int    `mapstructure:"port"`
+	StartTime string `mapstructure:"start_time"`
+	MachineID int64  `mapstructure:"machine_id"`
 
 	*MySQLConfig `mapstructure:"mysql"`
 	*LogConfig   `mapstructure:"log"`
@@ -48,7 +50,7 @@ func Init() (err error) {
 	viper.SetConfigFile("config.json")
 	//viper.SetConfigName("config")
 	//viper.SetConfigType("yaml")
-	viper.AddConfigPath(".")
+	//viper.AddConfigPath(".")
 	err = viper.ReadInConfig()
 	if err != nil {
 		fmt.Printf("viper.ReadInConfig() failed err: %v \n", err)

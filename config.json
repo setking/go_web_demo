@@ -2,7 +2,10 @@
   "app" : {
     "name": "web_app",
     "mode": "dev",
-    "port": 8088
+    "port": 8088,
+    "version": "v0.0.1",
+    "start_time": "2022-01-07",
+    "machine_id": 1
   },
   "log" : {
     "level": "debug",

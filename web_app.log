@@ -32,3 +32,17 @@
 {"level":"DEBUG","time":"2022-01-07T14:01:44.324+0800","caller":"myApp/main.go:33","msg":"init success"}
 {"level":"INFO","time":"2022-01-07T14:01:46.627+0800","caller":"logger/logger.go:71","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36","errors":"","cost":0}
 {"level":"INFO","time":"2022-01-07T14:01:46.831+0800","caller":"logger/logger.go:71","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36","errors":"","cost":0}
+{"level":"DEBUG","time":"2022-01-07T14:14:26.311+0800","caller":"myApp/main.go:33","msg":"init success"}
+{"level":"DEBUG","time":"2022-01-07T14:22:29.326+0800","caller":"myApp/main.go:33","msg":"init success"}
+{"level":"INFO","time":"2022-01-07T14:23:44.117+0800","caller":"myApp/main.go:69","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-01-07T14:23:44.132+0800","caller":"myApp/main.go:78","msg":"Server exiting"}
+{"level":"DEBUG","time":"2022-01-07T14:23:55.915+0800","caller":"myApp/main.go:33","msg":"init success"}
+{"level":"DEBUG","time":"2022-01-07T15:03:30.322+0800","caller":"myApp/main.go:33","msg":"init success"}
+{"level":"INFO","time":"2022-01-07T15:14:04.721+0800","caller":"myApp/main.go:69","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-01-07T15:14:04.731+0800","caller":"myApp/main.go:78","msg":"Server exiting"}
+{"level":"DEBUG","time":"2022-01-07T15:45:15.270+0800","caller":"bluebell/main.go:33","msg":"init success"}
+{"level":"INFO","time":"2022-01-07T16:49:11.564+0800","caller":"bluebell/main.go:69","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-01-07T16:49:11.564+0800","caller":"bluebell/main.go:78","msg":"Server exiting"}
+{"level":"DEBUG","time":"2022-01-07T16:49:14.109+0800","caller":"bluebell/main.go:34","msg":"init success"}
+{"level":"DEBUG","time":"2022-01-07T16:49:23.603+0800","caller":"bluebell/main.go:34","msg":"init success"}
+{"level":"DEBUG","time":"2022-01-07T16:54:31.420+0800","caller":"bluebell/main.go:34","msg":"init success"}
