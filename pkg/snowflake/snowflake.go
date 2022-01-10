@@ -1,8 +1,9 @@
 package snowflake
 
 import (
-	sf "github.com/bwmarrin/snowflake"
 	"time"
+
+	sf "github.com/bwmarrin/snowflake"
 )
 
 var node *sf.Node

@@ -3,9 +3,7 @@
     "name": "web_app",
     "mode": "dev",
     "port": 8088,
-    "version": "v0.0.1",
-    "start_time": "2022-01-07",
-    "machine_id": 1
+    "version": "v0.0.1"
   },
   "log" : {
     "level": "debug",
@@ -19,7 +17,7 @@
     "port": 3306,
     "user": "root",
     "password": "root",
-    "dbname": "sql_test",
+    "dbname": "bluebell",
     "max_open_conns": 200,
     "max_idle_conns": 50
   },
@@ -28,6 +26,11 @@
     "password": "",
     "port": 6379,
     "db": 0,
-    "pool_size": 100
+    "pool_size": 100,
+    "timeout": 10000
+  },
+  "SnowConfig" : {
+    "start_time": "2022-01-07",
+    "machine_id": 1
   }
 }

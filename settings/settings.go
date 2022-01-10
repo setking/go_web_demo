@@ -10,18 +10,18 @@ import (
 var Conf = new(AppConfig)
 
 type AppConfig struct {
-	Name      string `mapstructure:"name"`
-	Mode      string `mapstructure:"mode"`
-	Version   string `mapstructure:"version"`
-	Port      int    `mapstructure:"port"`
-	StartTime string `mapstructure:"start_time"`
-	MachineID int64  `mapstructure:"machine_id"`
-
+	*MyAppConfig `mapstructure:"app"`
 	*MySQLConfig `mapstructure:"mysql"`
 	*LogConfig   `mapstructure:"log"`
 	*RedisConfig `mapstructure:"redis"`
+	*SnowConfig  `mapstructure:"SnowConfig"`
 }
-
+type MyAppConfig struct {
+	Name    string `mapstructure:"name"`
+	Mode    string `mapstructure:"mode"`
+	Version string `mapstructure:"version"`
+	Port    int    `mapstructure:"port"`
+}
 type MySQLConfig struct {
 	Host         string `mapstructure:"host"`
 	User         string `mapstructure:"user"`
@@ -44,6 +44,12 @@ type RedisConfig struct {
 	Port     int    `mapstructure:"port"`
 	DB       int    `mapstructure:"db"`
 	PoolSize int    `mapstructure:"pool_size"`
+	Timeout  int    `mapstructure:"timeout"`
+}
+
+type SnowConfig struct {
+	StartTime string `mapstructure:"start_time"`
+	MachineID int64  `mapstructure:"machine_id"`
 }
 
 func Init() (err error) {
