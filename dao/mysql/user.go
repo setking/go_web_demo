@@ -11,6 +11,12 @@ import (
 
 const secret = "123456"
 
+var (
+	ErrorUserExist       = errors.New("用户已存在")
+	ErrorUserNotExist    = errors.New("用户不存在")
+	ErrorInvalidPassword = errors.New("用户名或密码错误")
+)
+
 //数据库操作封装成函数
 //待logic层根据业务需求调用
 //检查用户名是否存在
@@ -21,14 +27,14 @@ func CheckUserExist(username string) (err error) {
 		return err
 	}
 	if count > 0 {
-		return errors.New("用户已存在")
+		return ErrorUserExist
 	}
 	return
 }
 
 //数据库插入新的用户记录
 func InsertUser(user *models.User) (err error) {
-	user.Password = user.Password
+	user.Password = MD5Password(user.Password)
 	sqlStr := `insert into user(user_id, username, password) values(?, ?, ?)`
 	_, err = db.Exec(sqlStr, user.UserID, user.Username, user.Password)
 	return
@@ -48,14 +54,14 @@ func Login(user *models.User) (err error) {
 	err = db.Get(user, sqlStr, user.Username)
 	fmt.Printf("userData: %v\n", user)
 	if err == sql.ErrNoRows {
-		return errors.New("用户不存在")
+		return ErrorUserNotExist
 	}
 	if err != nil {
 		return err
 	}
 	password := MD5Password(oPassword)
 	if password != user.Password {
-		return errors.New("密码错误")
+		return ErrorInvalidPassword
 	}
 	return
 }

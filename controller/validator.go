@@ -49,7 +49,7 @@ func InitTrans(locale string) (err error) {
 	return
 }
 
-func removeTopStruct(field map[string]string) map[string]string {
+func RemoveTopStruct(field map[string]string) map[string]string {
 	res := map[string]string{}
 	for field, err := range field {
 		res[field[strings.Index(field, ".")+1:]] = err

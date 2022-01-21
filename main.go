@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"myApp/controller"
 	"myApp/dao/mysql"
-	"myApp/dao/redis"
 	"myApp/logger"
 	"myApp/pkg/snowflake"
 	"myApp/routes"
@@ -33,11 +32,11 @@ func main() {
 	}
 	defer mysql.Close()
 	//初始化redis连接
-	if err := redis.Init(settings.Conf.RedisConfig); err != nil {
-		fmt.Printf("init redis failed, err:%v\n", err)
-		return
-	}
-	defer redis.Close()
+	//if err := redis.Init(settings.Conf.RedisConfig); err != nil {
+	//	fmt.Printf("init redis failed, err:%v\n", err)
+	//	return
+	//}
+	//defer redis.Close()
 	if err := snowflake.Init(settings.Conf.SnowConfig.StartTime, settings.Conf.SnowConfig.MachineID); err != nil {
 		fmt.Printf("init snowflake failed, err:%v\n", err)
 		return
