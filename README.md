@@ -1,2 +1,4 @@
 # go_web_demo
-go + gin + docker + redis
+go + gin + docker + redis + mysql
+
+
