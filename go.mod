@@ -4,6 +4,7 @@ go 1.16
 
 require (
 	github.com/bwmarrin/snowflake v0.3.0
+	github.com/cosmtrek/air v1.27.9 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/fsnotify/fsnotify v1.5.1
 	github.com/gin-gonic/gin v1.7.7
@@ -19,6 +20,6 @@ require (
 	github.com/spf13/viper v1.10.1
 	go.uber.org/zap v1.17.0
 	golang.org/x/net v0.0.0-20211015210444-4f30a5c0130f // indirect
-	golang.org/x/sys v0.0.0-20211216021012-1d35b9e2eb4e // indirect
+	golang.org/x/sys v0.0.0-20220114195835-da31bd327af9 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
 )

@@ -11,7 +11,7 @@ import (
 	"go.uber.org/zap"
 )
 
-//处理注册请求的函数
+// 处理注册请求的函数
 func SignUpHandler(c *gin.Context) {
 	//校验参数
 	p := new(models.ParamSignUp)
@@ -40,7 +40,7 @@ func SignUpHandler(c *gin.Context) {
 	ResponseSuccess(c, nil)
 }
 
-//处理登录请求的函数
+// 处理登录请求的函数
 func LoginHandler(c *gin.Context) {
 	//校验参数
 	p := new(models.ParamLogin)

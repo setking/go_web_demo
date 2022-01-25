@@ -15,7 +15,8 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 			c.Abort()
 			return
 		}
-		parts := strings.SplitN(authHeader, "", 2)
+		println(authHeader)
+		parts := strings.SplitN(authHeader, " ", 2)
 		if !(len(parts) == 2 && parts[0] == "Bearer") {
 			controller.ResponseError(c, controller.CodeInvalidToken)
 			c.Abort()

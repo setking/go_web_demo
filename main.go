@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
+	"go.uber.org/zap"
 	"myApp/controller"
 	"myApp/dao/mysql"
 	"myApp/logger"
 	"myApp/pkg/snowflake"
 	"myApp/routes"
 	"myApp/settings"
-
-	"go.uber.org/zap"
 )
 
 func main() {
@@ -57,7 +56,7 @@ func main() {
 		return
 	}
 	//srv := &http.Server{
-	//	Addr:    fmt.Sprintf(":%d", settings.Conf.Port),
+	//	Addr:    fmt.Sprintf(":%d", settings.Conf.MyAppConfig.Port),
 	//	Handler: r,
 	//}
 	//
