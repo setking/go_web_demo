@@ -9,3 +9,8 @@ import (
 func GetCommunity() ([]*models.Community, error) {
 	return mysql.GetCommunity()
 }
+
+//查询社区分类详情
+func GetCommunityDetail(id int64) (*models.CommunityDetail, error) {
+	return mysql.GetCommunityDetailByID(id)
+}

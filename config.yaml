@@ -1,11 +1,8 @@
 app:
   name: "web_app"
   mode: "dev"
-  port: 8089,
+  port: 8088,
   version: "0.0.1"
-  start_time: "2022-01-07"
-  machine_id: 1
-
 log:
   level: "debug"
   filename: "web_app.log"
@@ -16,7 +13,7 @@ mysql:
   host: "127.0.0.1"
   port: 3306
   user: "root"
-  password: "k1310234627"
+  password: "root"
   dbname: "bluebell"
   max_open_conns: 200
   max_idle_conns: 50
@@ -26,3 +23,7 @@ redis:
   port: 6379
   db: 0
   pool_size: 100
+  timeout: 10000
+SnowConfig:
+  start_time: 2022-01-07
+  machine_id: 1
